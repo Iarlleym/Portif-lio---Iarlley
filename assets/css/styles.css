@@ -1,0 +1,65 @@
+
+/*ESTILO GERAL DO SITE*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #000;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+    padding: 40PX 4%;
+}
+
+header > .interface { /*Procura diretamente os elementos dentro do header com a classe interface*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a {
+    color:#5e5e5e; /*Coloca a cor branca nos a*/
+    text-decoration: none; /*Retira a linha a baixo dos links*/
+    display: inline-block; /*O a fica com as propriedades do display block e do in line*/
+    transition: 0.2s;
+}
+
+header a:hover { /*Qunado o mouse for passado pro cima*/
+    color: #fff;
+    transform: scale(1.1); /*Aumenta o item quando o mouse passar (Só funciona se o item for display block)*/
+}
+
+header nav ul {
+    list-style-type: none; /*Retiras as bolinhas do menu*/
+}
+
+header nav ul li {
+    display: inline-block; /*Coloca os itens em linha*/
+    padding: 0 40px;
+}
+
+header .btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600; /*deixa a fonte mais destacada*/
+    background-color: #D2691E;
+    border: 0; /*Retira todas as bordas quadradas*/
+    border-radius: 30px; /*Coloca bordas redondas*/
+    cursor: pointer; /*Coloca a manzinha quando passa por ele*/
+}
+
+header .btn-contato button:hover {
+    box-shadow: 0 0 10px #D2691E; 
+}

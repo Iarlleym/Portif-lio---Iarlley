@@ -18,6 +18,37 @@ body{
     margin: 0 auto;
 }
 
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600; /*deixa a fonte mais destacada*/
+    background-color: #D2691E;
+    border: 0; /*Retira todas as bordas quadradas*/
+    border-radius: 30px; /*Coloca bordas redondas*/
+    cursor: pointer; /*Coloca a manzinha quando passa por ele*/
+    transition: 0.2s; /*Coloca uma trasição quando passa o mouse por cima*/
+}
+
+h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    padding: 30px;
+}
+
+h2.titulo span{
+    color: #D2691E;
+}
+
+button:hover {
+    box-shadow: 0 0 10px #D2691E; 
+    transform: scale(1.05);
+}
+
 /* ESTILO DO CABEÇALHO */
 
 header{
@@ -50,16 +81,130 @@ header nav ul li {
     padding: 0 40px;
 }
 
-header .btn-contato button {
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 600; /*deixa a fonte mais destacada*/
-    background-color: #D2691E;
-    border: 0; /*Retira todas as bordas quadradas*/
-    border-radius: 30px; /*Coloca bordas redondas*/
-    cursor: pointer; /*Coloca a manzinha quando passa por ele*/
+
+/*ESTILO DO TOPO DO SITE*/
+
+section.topo-do-site  {
+    padding: 40px 4%;
+}
+section.topo-do-site .flex  { /*(Prestar atenção no espaço entre as classes!!!)Dessa frma eu consigo colocar as configurações no display flex*/
+    align-items: center;      
+    justify-content: center;
+    gap: 90px ; /*Esse gap é um espaçamento entre os elementos do display flex*/
 }
 
-header .btn-contato button:hover {
-    box-shadow: 0 0 10px #D2691E; 
+.topo-do-site .txt-topo-site h1 {
+    color: #fff;
+    font-size: 36px;
+    line-height: 40px; /*Configura a altura entre as linhas*/
+
+}
+
+.topo-do-site .txt-topo-site h1 span {
+    color: #D2691E;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #fff;
+    margin: 40px 0;
+    text-align: justify;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative; /*Para se usar top left righ bottom tem que ter a position relative e NÂO STATC*/
+    animation: flutuar 2s ease-in-out infinite alternate; /*Chama a animação que vc criou no keyframes (2s é o temo, ease in out é a velocidade com que se comporta, 
+    infinite ela não para de se mexer e alternando 0-100 de 100-0)*/
+
+}
+
+
+@keyframes flutuar { /*É para trabalhar com as animações do CSS (O nome flutuar pode ser qualquer nome)*/
+    
+    0%{ /*Como a minha imagem vai estar quando entrar no site (Momento inicial)*/
+        top: 0;
+    }
+    100%{ /*Como a minha imagem vai estar quando estier no final da animação (Momento final)*/
+        top: 30px;
+    }
+} 
+
+/*ESTILO DAS ESPECIALIDADES*/
+
+section.especialidades {
+    padding: 40PX 4%;
+}
+
+section.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box {
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 25px;
+    transition: 0.2s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff6c;
+}
+
+.especialidades .especialidades-box p{
+    text-align: justify;
+}
+
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: #D2691E;
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+
+}
+
+/*ESTILO DO SOBRE*/
+
+section.sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre {
+    color: #fff;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+
+}
+.sobre .txt-sobre h2 span{
+    display: block;
+    color: #D2691E;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.sobre .txt-sobre .btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #D2691E;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.2s;
 }

@@ -299,12 +299,13 @@ section.sobre .flex{
 
 section.portifolio {
     padding: 0 4%;
-    padding-top: 150px;
-    padding-bottom: 100px;
-    box-shadow: 0 0 40px 10px #ffffff2d; /*Cria a sombra de destaque entre as paginas*/
+    padding-top: 100px;
+    padding-bottom: 50px;
+    /* box-shadow: 0 0 40px 10px #ffffff2d; Cria a sombra de destaque entre as paginas */
 }
 
 section.portifolio .flex{
+    gap: 20px;
     align-items: center;
     justify-content: space-around;
     margin-top: 60px;
@@ -444,6 +445,7 @@ footer .flex{
 
 .line-footer{
     padding: 2px 2px;
+    text-align: center;
 }
 
 .borda{
@@ -461,7 +463,15 @@ footer .line-footer p a{
 
 /*RESPONSIVIDADE*/
 
-@media screen and (max-width: 1020px){
+@media all and (min-width: 1020px) {   /*essa parte faz com que o site no tamanho de 1020px pra mais esconda o menu mobile*/
+    
+    header.menu-fixed .btn-abrir-menu {
+        display: none;
+    }
+
+}
+
+@media all and (min-width: 0px) and (max-width: 1019px) {  /*Faz com que de 0px até 1019px a pagina tenha só o menu mobile*/
 
     /*CLASSES GERAIS*/
 
@@ -478,7 +488,7 @@ footer .line-footer p a{
 
     header{
         padding: 0 4%;
-        background-color: #00000000;
+        background-color: #961c1c00;
     }
 
     header.menu-fixed {
@@ -487,10 +497,9 @@ footer .line-footer p a{
     }
 
     header.menu-fixed a img {
-        display: none; /*Retira a logo quando estiver no celular*/
+       /* display: none; /*Retira a logo quando estiver no celular*/
+       width: 80%; /*Diminui para 80% do tamanho a logo*/
     }
-
-
 
     .menu-desktop, .btn-contato{
         display: none;
@@ -564,6 +573,7 @@ footer .line-footer p a{
 
     footer .flex{
         flex-direction: column;
+        padding-bottom: 10px;
         gap: 10px;
     }
     .line-footer{
